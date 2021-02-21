@@ -1,0 +1,10 @@
+/* ./assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+* {
+  @apply bg-black;
+}
+@tailwind utilities;
+
+
+
