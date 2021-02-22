@@ -16,6 +16,9 @@ module.exports = {
       colors: {
         'custom-blue':'#99d4ff',
         'gray-black' : '#1e1e1e'
+      },
+      fontFamily: {
+        'robo' : ['Roboto', 'sans-serif']
       }
     },
   },

@@ -1,6 +1,6 @@
 <template lang="pug">
-  div.bg-black
-    .h-screen.mx-2
+  div.bg-black.h-full
+    .mx-2
       Nuxt
 </template>
 
