@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.mt-12.pt-4.h-44.flex.items-center
+  section.pt-4.h-44.flex.items-center
     img.min-w-28.h-full(src="~assets/images/black_clover.jpg" alt="card image")
     div.containerr.h-full(class=" flex-shrink")
       div.blur.bg-black.bg-opacity-60.h-full.w-full
