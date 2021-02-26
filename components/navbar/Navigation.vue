@@ -14,7 +14,7 @@
         button
           svg.h-8.w-8.p-1.text-custom-blue.bg-gray-700(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
             path(stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16")
-      .absolute.top-8.px-5.mt-4.w-full.h-screen.right-0.-left-2.bg-black
+      .fixed.top-7.px-5.mt-4.w-full.right-0.-left-2.bg-black.overflow-y-scroll
         .mt-6.p-3.bg-gray-black
           .w-full.flex.items-center.space-x-2
             div
@@ -70,7 +70,7 @@
                     option.bg-gray-black(value="2017") 2017
                   .pl-2(class="w-1/3")
                     button.px-5.py-px.text-md.text-gray-300.bg-gray-800.rounded(class="focus:outline-none") GO
-            .py-1.flex.flex-col
+            .py-2.flex.flex-col
               h2.w-full.pb-1.px-3.text-center.text-white.font-semibold.border-b.border-gray-700 Genres
               .flex.flex-wrap.px-2.py-2.w-full
                 .flex.items-center.space-x-2(v-for="i in 24" :key="i" class="w-1/3")
@@ -79,6 +79,21 @@
               .mt-1.pb-2.flex.items-center.justify-center.border-b.border-gray-600
                 svg.h-5.w-5.text-gray-400(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
                   path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7")
+              .py-3.px-3.flex.items-center.w-full.border-b.border-gray-600
+                .px-1.flex.flex-col.space-y-2(class="w-1/2")
+                  span.text-gray-300 Season :
+                  select.py-px.px-1.bg-gray-black.text-gray-300.bg-no-repeat.bg-right-top(class="hover:outline-none focus:outline-none" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMyA0Ljk1IDYiPjxkZWZzPjxzdHlsZT4uY2xzLTJ7ZmlsbDojZDhkOGQ4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+YXJyb3dzPC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+)")
+                    option.bg-gray-black(value="winter") Winter
+                    option.bg-gray-black(value="spring") Spring
+                    option.bg-gray-black(value="summer") Summer
+                    option.bg-gray-black(value="fall") Fall
+                .px-1.flex.flex-col.space-y-2(class="w-1/2")
+                  span.text-gray-300 Season :
+                  select.py-px.px-1.bg-gray-black.text-gray-300.bg-no-repeat.bg-right-top(class="hover:outline-none focus:outline-none" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMyA0Ljk1IDYiPjxkZWZzPjxzdHlsZT4uY2xzLTJ7ZmlsbDojZDhkOGQ4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+YXJyb3dzPC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+)")
+                    option.bg-gray-black(value="winter") Winter
+                    option.bg-gray-black(value="spring") Spring
+                    option.bg-gray-black(value="summer") Summer
+                    option.bg-gray-black(value="fall") Fall
 
 </template>
 
