@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": false,
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -10,10 +11,13 @@
     ],
     "esModuleInterop": true,
     "allowJs": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
@@ -33,5 +37,6 @@
     "node_modules",
     ".nuxt",
     "dist"
-  ]
+  ],
+  "compileOnSave": false
 }

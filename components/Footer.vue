@@ -1,7 +1,7 @@
 <template lang="pug">
   div
-    .h-9.mt-6.-mx-2.flex.justify-between.items-center.bg-gray-black.border-b.border-gray-900
-      .ml-2.flex.items.center
+    .h-9.py-2.mt-6.flex.justify-between.items-center.bg-gray-black.border-b.border-gray-900
+      .px-2.flex.items.center
         span.text-gray-400.text-sm Donate
         svg.ml-2.h-5.w-5(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100")
           circle(cx="13" cy="29" r="2" fill="#ee3e54")
@@ -24,7 +24,7 @@
             path(fill="#472b29" d="M61.592 45.304a.249.249 0 01-.236-.168 7.22 7.22 0 00-2.558-3.475.25.25 0 01.297-.403 7.721 7.721 0 012.733 3.715.25.25 0 01-.236.331zM54.5 55.25c-4.273 0-7.75-3.477-7.75-7.75s3.477-7.75 7.75-7.75c.866 0 1.718.142 2.53.422a.25.25 0 01-.164.473 7.238 7.238 0 00-2.366-.395c-3.998 0-7.25 3.252-7.25 7.25s3.252 7.25 7.25 7.25 7.25-3.252 7.25-7.25a.25.25 0 01.5 0c0 4.273-3.477 7.75-7.75 7.75z")
         svg.ml-2.w-5.h-5.text-yellow-500(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor")
           path(d="M24 4C12.972 4 4 12.972 4 24s8.972 20 20 20 20-8.972 20-20S35.028 4 24 4zm-.5 7a1.5 1.5 0 011.5 1.5V14h.5c3.033 0 5.5 2.467 5.5 5.5a5.46 5.46 0 01-1.082 3.262A6.003 6.003 0 0133 28c0 3.309-2.691 6-6 6h-2v1.5a1.5 1.5 0 11-3 0V34h-3.5a1.5 1.5 0 01-1.5-1.5v-17a1.5 1.5 0 011.5-1.5H22v-1.5a1.5 1.5 0 011.5-1.5zM20 17v5h5.5c1.378 0 2.5-1.122 2.5-2.5S26.878 17 25.5 17H20zm0 8v6h7c1.654 0 3-1.346 3-3s-1.346-3-3-3h-7z")
-      .mr-2.flex.items-center
+      .px-2.flex.items-center
         span.text-gray-400.text-sm Chat
         .ml-2.my-auto.w-8.h-4.flex.items-center.rounded-full.bg-gray-600
           .m-0.h-full.bg-gray-400.rounded-full.outline-none(class="w-1/2")
@@ -32,7 +32,7 @@
           path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z")
         svg.ml-2.w-5.h-5.text-custom-blue(xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" )
           path(d="M25.855 5.574c-.94.418-1.953.7-3.015.828a5.279 5.279 0 002.308-2.906 10.515 10.515 0 01-3.335 1.274 5.251 5.251 0 00-8.945 4.79 14.908 14.908 0 01-10.821-5.49 5.23 5.23 0 00-.711 2.645c0 1.82.926 3.426 2.336 4.367a5.205 5.205 0 01-2.379-.656v.066a5.255 5.255 0 004.21 5.149 5.204 5.204 0 01-1.382.183c-.34 0-.668-.031-.988-.094a5.252 5.252 0 004.902 3.645 10.508 10.508 0 01-6.52 2.246c-.425 0-.84-.023-1.25-.07a14.858 14.858 0 008.047 2.355c9.657 0 14.938-8 14.938-14.933 0-.23-.004-.457-.016-.684a10.501 10.501 0 002.621-2.715")
-    .h-24.-mx-2.pb-4.text-center.bg-gray-black
+    .h-24.pb-4.text-center.bg-gray-black
       h4.pt-2.text-xs.text-gray-400.font-medium AniMixPlay - Watch HD Anime Ad-Free ©2020 All Rights Reserved.
       p.mt-2.text-xs.font-thin.leading-3.text-gray-600 Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.
 </template>
