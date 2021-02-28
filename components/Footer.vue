@@ -32,9 +32,9 @@
           path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z")
         svg.ml-2.w-5.h-5.text-custom-blue(xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" )
           path(d="M25.855 5.574c-.94.418-1.953.7-3.015.828a5.279 5.279 0 002.308-2.906 10.515 10.515 0 01-3.335 1.274 5.251 5.251 0 00-8.945 4.79 14.908 14.908 0 01-10.821-5.49 5.23 5.23 0 00-.711 2.645c0 1.82.926 3.426 2.336 4.367a5.205 5.205 0 01-2.379-.656v.066a5.255 5.255 0 004.21 5.149 5.204 5.204 0 01-1.382.183c-.34 0-.668-.031-.988-.094a5.252 5.252 0 004.902 3.645 10.508 10.508 0 01-6.52 2.246c-.425 0-.84-.023-1.25-.07a14.858 14.858 0 008.047 2.355c9.657 0 14.938-8 14.938-14.933 0-.23-.004-.457-.016-.684a10.501 10.501 0 002.621-2.715")
-    .h-24.pb-4.text-center.bg-gray-black
-      h4.pt-2.text-xs.text-gray-400.font-medium AniMixPlay - Watch HD Anime Ad-Free ©2020 All Rights Reserved.
-      p.mt-2.text-xs.font-thin.leading-3.text-gray-600 Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.
+    .h-24.py-2.text-center.bg-gray-black(class="md:h-20")
+      h4.text-xs.text-gray-400.font-medium AniMixPlay - Watch HD Anime Ad-Free ©2020 All Rights Reserved.
+      p.pt-2.text-xs.font-thin.leading-3.text-gray-600 Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.
 </template>
 
 <script lang="ts">
