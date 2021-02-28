@@ -1,5 +1,5 @@
 <template lang="pug">
-  .fixed.top-11.px-5.w-full.h-screen.right-0.bg-black.overflow-y-scroll.transform.transition.duration-1000.ease-in-out(:class="state ? ' translate-x-0' : 'translate-x-full'")
+  .fixed.top-11.px-5.w-full.h-screen.right-0.bg-black.overflow-y-scroll.transform.transition.duration-1000.ease-in-out(:class="state ? ' translate-x-0' : 'translate-x-full'" class="md:w-1/2")
     .mt-6.p-3.bg-gray-black
       .w-full.flex.items-center.space-x-2
         div
@@ -25,17 +25,17 @@
                 path(fill="none" d="M0 0h48v48H0z")
           .h-full.px-6.py-2.bg-blue-500.text-sm.text-white Sign in
     .flex.flex-col.mt-3
-      .flex.items-center.space-x-3.px-16.bg-gray-800.w-full(class="py-2")
-        .flex.text-sm.space-x-2.items-center
+      .flex.items-center.space-x-2.px-16.bg-gray-800.w-full(class="py-2 md:px-12")
+        .flex.text-sm.space-x-1.items-center
           svg.h-4.w-4.text-gray-400(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
             path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z")
-          span.text-gray-400 Schedule
-        .flex.text-sm.space-x-2.items-center
+          span.text-gray-400.text-sm Schedule
+        .flex.text-sm.space-x-1.items-center
           svg.h-4.w-4.text-gray-400(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
             path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15")
-          span.text-gray-400 Random
-        .flex.text-sm.space-x-2
-          span.text-gray-400 A-Z List
+          span.text-gray-400.text-sm Random
+        .flex.flex-no-wrap.text-sm.space-x-2
+          span.text-gray-400.text-sm A-Z List
       .flex.flex-col.bg-custom-black
         .py-3.px-3.flex.items-center.w-full.border-b.border-gray-600
           .px-1.flex.flex-col.space-y-2(class="w-2/5")

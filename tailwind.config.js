@@ -23,7 +23,10 @@ module.exports = {
       },
       backgroundColor: ['checked'],
       borderColor: ['checked'],
-      textColor: ['checked']
+      textColor: ['checked'],
+      transitionProperty: {
+        'height': 'height',
+      }
     },
   },
   variants: {
