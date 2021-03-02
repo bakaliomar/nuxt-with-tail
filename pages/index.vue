@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.relative
+  div.relative.w-full
     Navigation(@open="openMenu" @focus="onFocus")
     .h-16.pt-3.pb-6.bg-black.fixed.top-12.inset-x-0.z-20(:class="(focusState && searchInput) ? 'block' : 'hidden'")
       .border-b.border-gray-700.flex.px-2
@@ -11,12 +11,13 @@
         a.mb-px.px-4.py-1.ml-px.text-custom-blue.text-sm.bg-gray-black.rounded(href="#") Amax
         a.mb-px.px-4.py-1.ml-px.text-custom-blue.text-sm.bg-gray-black.rounded(href="#") Rush
         a.mb-px.px-4.py-1.ml-px.text-custom-blue.text-sm.bg-gray-black.rounded(href="#") Mal
-    .mx-2
-      SliderCard
-      Discord
-      Tabs
-      Cards
-    SideBar(:state="menuState")
+    .flex.w-full(class="lg:px-8")
+      .px-2(class="w-8/12")
+        SliderCard
+        Discord
+        Tabs
+        Cards
+      SideBar(:state="menuState")
     Footer
 </template>
 

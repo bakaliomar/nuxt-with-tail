@@ -1,5 +1,5 @@
 <template lang="pug">
-  .h-60.mt-2(class="w-1/3 md:w-1/6")
+  .h-60.mt-2(class="w-1/3 md:w-1/6 lg:w-1/4")
     .flex.flex-col.bg-gray-black.ml-2
       .card-image.h-44.relative
         img.h-full.w-full.object-cover.object-center(src="~/assets/images/day.jpg")

@@ -3,9 +3,9 @@
     img.min-w-28.h-full(src="~assets/images/black_clover.jpg" alt="card image")
     div.containerr.h-full(class=" flex-shrink")
       div.blur.bg-black.bg-opacity-60.h-full.w-full
-        a.ml-2.mt-1.text-sm.text-custom-blue.inline-block(href="#")
+        a.ml-2.mt-1.text-sm.text-custom-blue.inline-block(href="#" class="lg:text-lg")
           h2 Black Clover
-        p.h-16.mt-2.ml-2.mr-5.text-gray-400.text-xs.overflow-y-hidden Asta and Yuno were abandoned at the same church on the same day. Raised together as children, they came to know of the "Wizard King"—a title given to the strongest mage in the kingdom—and promised that they would compete against each other for the position of the next Wizard King. However, as they grew up, the stark difference between them became evident.
+        p.h-16.mt-2.ml-2.mr-5.text-gray-400.text-xs.overflow-y-hidden(class="text-sm") Asta and Yuno were abandoned at the same church on the same day. Raised together as children, they came to know of the "Wizard King"—a title given to the strongest mage in the kingdom—and promised that they would compete against each other for the position of the next Wizard King. However, as they grew up, the stark difference between them became evident.
         div.my-6.ml-2.mr-5.flex.justify-between.items-center
           div.flex.items-center
             svg.h-6.w-6.text-custom-blue(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
