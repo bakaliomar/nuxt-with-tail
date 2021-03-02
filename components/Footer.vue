@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div.w-full
     .h-9.py-2.mt-6.flex.justify-between.items-center.bg-gray-black.border-b.border-gray-900
       .px-2.flex.items.center
         span.text-gray-400.text-sm Donate

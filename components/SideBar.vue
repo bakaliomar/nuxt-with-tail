@@ -1,6 +1,6 @@
 <template lang="pug">
-  .fixed.top-11.px-5.w-full.h-screen.right-0.bg-black.overflow-y-scroll.transform.transition.duration-1000.ease-in-out(:class="state ? ' translate-x-0' : 'translate-x-full'" class="md:w-1/2")
-    .mt-6.p-3.bg-gray-black
+  .fixed.top-11.px-5.w-full.h-screen.right-0.bg-black.overflow-y-scroll.transform.transition.duration-1000.ease-in-out(:class="state ? ' translate-x-0' : 'translate-x-full'" class="md:w-7/12 lg:static lg:w-4/12 lg:translate-x-0 lg:overflow-y-visible lg:pr-3 lg:pl-px")
+    .mt-6.p-3.bg-gray-black(class="lg:mt-4")
       .w-full.flex.items-center.space-x-2
         div
           input.h-8.p-2.w-full.text-white.text-sm.bg-black.border.border-gray-800.rounded-sm(type="text" placeholder="Username" class="focus:outline-none focus:border-blue-800")
