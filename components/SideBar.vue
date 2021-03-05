@@ -1,5 +1,5 @@
 <template lang="pug">
-  .fixed.top-11.px-5.w-full.h-screen.right-0.bg-black.overflow-y-scroll.transform.transition.duration-1000.ease-in-out(:class="state ? ' translate-x-0' : 'translate-x-full'" class="md:w-7/12 lg:static lg:w-4/12 lg:translate-x-0 lg:overflow-y-visible lg:pr-3 lg:pl-px")
+  .fixed.top-11.px-5.w-full.h-screen.right-0.bg-black.overflow-y-scroll.transform.transition.duration-1000.ease-in-out(:class="state ? ' translate-x-0' : 'translate-x-full'" class="md:w-7/12 lg:static lg:w-4/12 lg:translate-x-0 lg:overflow-y-visible lg:pr-3 lg:pl-px xl:w-3/12")
     .mt-6.p-3.bg-gray-black(class="lg:mt-4")
       .w-full.flex.items-center.space-x-2
         div
@@ -25,7 +25,7 @@
                 path(fill="none" d="M0 0h48v48H0z")
           .h-full.px-6.py-2.bg-blue-500.text-sm.text-white Sign in
     .flex.flex-col.mt-3
-      .flex.items-center.space-x-2.px-16.bg-gray-800.w-full(class="py-2 md:px-12")
+      .flex.items-center.space-x-2.px-16.bg-gray-800.w-full(class="py-2 md:px-12 lg:hidden")
         .flex.text-sm.space-x-1.items-center
           svg.h-4.w-4.text-gray-400(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
             path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z")
@@ -53,18 +53,18 @@
                 option.bg-gray-black(value="2019") 2019
                 option.bg-gray-black(value="2018") 2018
                 option.bg-gray-black(value="2017") 2017
-              .pl-2(class="w-1/3")
-                button.px-5.py-px.text-md.text-gray-300.bg-gray-800.rounded(class="focus:outline-none") GO
+              .px-2(class="w-1/3")
+                button.px-5.py-px.text-sm.text-gray-300.bg-gray-800.rounded(class="focus:outline-none lg:px-3") GO
         .py-2.flex.flex-col
           h2.w-full.pb-1.px-3.text-center.text-white.font-semibold.border-b.border-gray-700 Genres
           .flex.flex-wrap.px-2.py-2.w-full
-            .flex.items-center.space-x-2(v-for="i in 24" :key="i" class="w-1/3")
-              input.bg-gray-300.text-gray-500(type="checkbox")
-              span.text-gray-200.text-sm.font-light Action
+            .flex.items-center.space-x-2(v-for="i in 24" :key="i" class="w-1/3 lg:w-1/2")
+              input.bg-gray-300.text-gray-200(type="checkbox")
+              span.mt-1.text-gray-200.text-xs.font-light Action
           .mt-1.pb-2.flex.items-center.justify-center.border-b.border-gray-600
             svg.h-5.w-5.text-gray-400(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
               path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7")
-          .py-3.px-3.flex.items-center.w-full
+          .py-3.px-3.flex.items-center.w-full.border-b.border-gray-700
             .px-1.flex.flex-col.space-y-2(class="w-1/2")
               span.text-gray-300.text-sm Stream :
               select.py-px.px-1.bg-gray-black.text-gray-300.bg-no-repeat.bg-right-top(class="hover:outline-none focus:outline-none" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMyA0Ljk1IDYiPjxkZWZzPjxzdHlsZT4uY2xzLTJ7ZmlsbDojZDhkOGQ4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+YXJyb3dzPC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+)")
@@ -79,6 +79,12 @@
                 option.bg-gray-black(value="spring") Spring
                 option.bg-gray-black(value="summer") Summer
                 option.bg-gray-black(value="fall") Fall
+          h2.w-full.pb-1.px-3.text-center.text-white.font-semibold.border-b.border-gray-700 On-going series
+          .mt-2.flex.flex-col.space-y-1.px-2
+            a.text-xs.text-custom-blue.no-underline(href="#" v-for="i in 45" :key="i") 2.43: Seiin Koukou Danshi Volley-bu
+            .flex.justify-center
+              svg.h-5.w-5.text-gray-400(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
+                path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7")
 </template>
 
 <script lang="ts">
@@ -87,7 +93,7 @@ import {Component, Prop, Vue} from "vue-property-decorator"
   name: "SideBar"
 })
 export default class SideBar extends Vue{
-  @Prop({default: false}) state : boolean;
+  @Prop({default: false}) state! : boolean;
 }
 </script>
 

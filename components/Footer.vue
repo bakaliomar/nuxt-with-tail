@@ -1,6 +1,6 @@
 <template lang="pug">
-  div.w-full
-    .h-9.py-2.mt-6.flex.justify-between.items-center.bg-gray-black.border-b.border-gray-900
+  div.w-full.bg-gray-black
+    .h-9.py-2.mt-6.flex.justify-between.items-center.border-b.border-gray-900(class="xl:container")
       .px-2.flex.items.center
         span.text-gray-400.text-sm Donate
         svg.ml-2.h-5.w-5(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100")
