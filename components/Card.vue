@@ -1,7 +1,7 @@
 <template lang="pug">
-  .h-60.mt-2(class="w-1/3 md:w-1/6 lg:w-1/4")
+  .h-80.mt-2(class="w-1/3 md:w-1/6 lg:w-1/4 xl:w-1/6")
     .flex.flex-col.bg-gray-black.ml-2
-      .card-image.h-44.relative
+      .card-image.h-60.relative
         img.h-full.w-full.object-cover.object-center(src="~/assets/images/day.jpg")
         .py-px.px-1.absolute.top-0.right-0.flex.items-center.bg-black.bg-opacity-50
           svg.w-4.h-4.text-yellow-300(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor")

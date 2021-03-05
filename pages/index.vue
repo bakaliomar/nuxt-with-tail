@@ -11,8 +11,8 @@
         a.mb-px.px-4.py-1.ml-px.text-custom-blue.text-sm.bg-gray-black.rounded(href="#") Amax
         a.mb-px.px-4.py-1.ml-px.text-custom-blue.text-sm.bg-gray-black.rounded(href="#") Rush
         a.mb-px.px-4.py-1.ml-px.text-custom-blue.text-sm.bg-gray-black.rounded(href="#") Mal
-    .flex.w-full(class="lg:px-8")
-      .px-2(class="w-8/12")
+    .flex.w-full(class="lg:px-5 xl:container xl:mx-auto")
+      .px-2(class="lg:w-8/12 xl:w-9/12")
         SliderCard
         Discord
         Tabs
@@ -22,24 +22,9 @@
 </template>
 
 <script lang="ts">
-import Navigation from '~/components/navbar/Navigation';
-import SideBar from "~/components/SideBar";
-import SliderCard from '~/components/SliderCard';
-import Cards from "~/components/Cards"
-import Discord from '@/components/Discord'
-import Tabs from '~/components/Tabs'
-import Footer from '~/components/Footer'
 import { Component, Vue } from "vue-property-decorator";
 @Component ({
-  components: {
-    Navigation,
-    SideBar,
-    SliderCard,
-    Cards,
-    Discord,
-    Tabs,
-    Footer
-  }
+ name: 'index'
 })
 export default class Index extends Vue{
   menuState = false;

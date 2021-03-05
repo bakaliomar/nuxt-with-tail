@@ -17,12 +17,9 @@
 
 <script lang="ts">
   import { Component, Vue } from "vue-property-decorator";
-  import Card from "~/components/Card"
   @Component (
     {
-      components: {
-        Card
-      }
+      name: 'cards'
     }
   )
   export default class Cards extends Vue{
