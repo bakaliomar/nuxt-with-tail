@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2556d44-06ba-47be-974f-1e7a218cf144" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/black_clover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/black_clover.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/day.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/day.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/workspoke_background_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/workspoke_background_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/workspoke_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/workspoke_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/tailwind.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/scss/tailwind.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Cards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Cards.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Discord.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Discord.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Logo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Logo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/SideBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SliderCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/SliderCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navbar/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/navbar/Navigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/plugins/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/store/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Logo.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/test/Logo.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/vue-shim.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/types/vue-shim.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oTrwizpOeNFZ6DsP4gxLPiyiWw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2556d44-06ba-47be-974f-1e7a218cf144" name="Default Changelist" comment="" />
+      <created>1613321661227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613321661227</updated>
+      <workItem from="1613321662713" duration="10164000" />
+      <workItem from="1613475485246" duration="611000" />
+      <workItem from="1613492040992" duration="599000" />
+      <workItem from="1613564570697" duration="599000" />
+      <workItem from="1613575920452" duration="907000" />
+      <workItem from="1613651579835" duration="1343000" />
+      <workItem from="1613737034536" duration="14905000" />
+      <workItem from="1613820924435" duration="11858000" />
+      <workItem from="1613913620627" duration="2938000" />
+      <workItem from="1613938492410" duration="12197000" />
+      <workItem from="1613996319881" duration="698000" />
+      <workItem from="1614082886433" duration="599000" />
+      <workItem from="1614160839336" duration="6238000" />
+      <workItem from="1614209320753" duration="4326000" />
+      <workItem from="1614254482316" duration="17368000" />
+      <workItem from="1614340768308" duration="3016000" />
+      <workItem from="1614426658587" duration="15877000" />
+      <workItem from="1614513047985" duration="16644000" />
+      <workItem from="1614599758804" duration="1219000" />
+      <workItem from="1614678011640" duration="14150000" />
+      <workItem from="1614764926700" duration="1029000" />
+      <workItem from="1614852664524" duration="599000" />
+      <workItem from="1614876810729" duration="598000" />
+      <workItem from="1614939508517" duration="7684000" />
+      <workItem from="1615047380236" duration="3476000" />
+      <workItem from="1615206596743" duration="1801000" />
+      <workItem from="1615291416540" duration="599000" />
+      <workItem from="1615380183420" duration="599000" />
+      <workItem from="1615467268938" duration="599000" />
+      <workItem from="1615554289330" duration="1217000" />
+      <workItem from="1615640213072" duration="599000" />
+      <workItem from="1615727346691" duration="599000" />
+      <workItem from="1615810060308" duration="599000" />
+      <workItem from="1615897786993" duration="620000" />
+      <workItem from="1615980934245" duration="599000" />
+      <workItem from="1615991502257" duration="488000" />
+      <workItem from="1616078344992" duration="599000" />
+      <workItem from="1616102258212" duration="323000" />
+      <workItem from="1616156087470" duration="599000" />
+      <workItem from="1616248134449" duration="1057000" />
+      <workItem from="1616417720824" duration="599000" />
+      <workItem from="1616432527893" duration="599000" />
+      <workItem from="1616501667248" duration="1790000" />
+      <workItem from="1616586151873" duration="597000" />
+      <workItem from="1616674915392" duration="1203000" />
+      <workItem from="1616757047997" duration="5853000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="770" y="224" width="442" height="665" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613322115565">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="770" y="224" width="442" height="665" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1613322115565" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1613327896322">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1613327896322" />
+  </component>
+</project>

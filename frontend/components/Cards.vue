@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    .flex.flex-wrap.bg-black.h-full.-ml-2
+    .flex.flex-wrap.bg-black.h-full.-ml-2.mt-2
       Card(v-for="i in 24" :key="i")
     .flex.justify-center.pt-8
       button.py-1.px-10.flex.items-center.space-x-2.text-custom-blue.bg-gray-800.border.border-gray-600.rounded-sm(@click="state = !state" class="focus:outline-none")
