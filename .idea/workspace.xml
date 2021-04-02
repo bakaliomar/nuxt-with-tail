@@ -11,46 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2556d44-06ba-47be-974f-1e7a218cf144" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/black_clover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/black_clover.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/day.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/day.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/workspoke_background_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/workspoke_background_image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/workspoke_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/workspoke_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/tailwind.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/scss/tailwind.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Cards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Cards.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Discord.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Discord.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Logo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Logo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/SideBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SliderCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/SliderCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Tabs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navbar/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/navbar/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/plugins/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/store/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Logo.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/test/Logo.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/vue-shim.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/types/vue-shim.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/core/database/mysql.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/core/database/mysql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middlewares.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/errorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares/errorHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/notFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares/notFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/okOutput.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares/okOutput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes-public.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes-public.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +34,18 @@
       <list>
         <option value="SCSS File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1oTrwizpOeNFZ6DsP4gxLPiyiWw" />
   <component name="ProjectViewState">
@@ -142,7 +121,15 @@
       <workItem from="1616501667248" duration="1790000" />
       <workItem from="1616586151873" duration="597000" />
       <workItem from="1616674915392" duration="1203000" />
-      <workItem from="1616757047997" duration="5853000" />
+      <workItem from="1616757047997" duration="6552000" />
+      <workItem from="1616855665121" duration="615000" />
+      <workItem from="1616945917476" duration="4004000" />
+      <workItem from="1617020672546" duration="599000" />
+      <workItem from="1617107187521" duration="640000" />
+      <workItem from="1617180923091" duration="599000" />
+      <workItem from="1617272522862" duration="4419000" />
+      <workItem from="1617358893697" duration="599000" />
+      <workItem from="1617384061189" duration="8030000" />
     </task>
     <servers />
   </component>
