@@ -13,16 +13,17 @@
     <list default="true" id="f2556d44-06ba-47be-974f-1e7a218cf144" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/backpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/lru-cache/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/lru-cache/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/yallist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/yallist/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/yallist/yallist.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/yallist/yallist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/core/database/mysql.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/core/database/mysql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/middlewares.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/errorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares/errorHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/notFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares/notFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/middlewares/okOutput.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/middlewares/okOutput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes-public.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes-public.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/animes/_routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/public/animes/_routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/animes/_routes/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/public/animes/_routes/show.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/animes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/public/animes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/login/_routes/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/public/login/_routes/local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/modules/public/user/_routes/fetch-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/modules/public/user/_routes/fetch-user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,7 @@
       <workItem from="1617180923091" duration="599000" />
       <workItem from="1617272522862" duration="4419000" />
       <workItem from="1617358893697" duration="599000" />
-      <workItem from="1617384061189" duration="8030000" />
+      <workItem from="1617384061189" duration="13604000" />
     </task>
     <servers />
   </component>
