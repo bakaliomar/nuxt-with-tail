@@ -12,6 +12,8 @@
     "backpack-core": "^0.8.4",
     "bcryptjs": "^2.4.3",
     "cross-env": "^7.0.3",
+    "googleapis": "^70.0.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-favicon": "^2.1.0",

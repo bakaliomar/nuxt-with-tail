@@ -7,7 +7,7 @@ const router = new Router()
 router.get('/:id', async (ctx, next) => {
   const id =parseInt(ctx.params.id)
   try {
-    const user = pool.query('SELECT `id`, `name`, `created_on` FROM `users` WHERE `id` ='+ id)
+    var user = pool.query('SELECT `id`, `name`, `created_on` FROM `users` WHERE id = ?', [ctx.params.id])
   } catch (err) {
     ctx.throw(500, err.sqlMessage)
   }
