@@ -8,7 +8,7 @@ import config from 'config'
 
 const router = new Router()
 
-router.post('/login', async (ctx, next) => {
+router.post('/local', async (ctx, next) => {
   let request = ctx.request.body || {}
    if(request.username === undefined) {
      ctx.throw(400, 'username param is required')

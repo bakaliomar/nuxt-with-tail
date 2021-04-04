@@ -7,7 +7,7 @@ const router = new Router()
 
 router.get('/:id', async (ctx, next) => {
   try {
-    var anime = await pool.query('SELECT * FROM `anime` WHERE id = ?', [ctx.params.id])
+    var anime = await pool.query('SELECT * FROM anime WHERE id = ?', [ctx.params.id])
   } catch (err) {
     ctx.throw(500, err.sqlMessage)
   }
