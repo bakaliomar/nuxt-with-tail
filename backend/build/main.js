@@ -198,32 +198,71 @@ app.listen(port, host);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var koa_static__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-static */ "koa-static");
 /* harmony import */ var koa_static__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_static__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var koa_favicon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! koa-favicon */ "koa-favicon");
-/* harmony import */ var koa_favicon__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(koa_favicon__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var koa_bodyparser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! koa-bodyparser */ "koa-bodyparser");
-/* harmony import */ var koa_bodyparser__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(koa_bodyparser__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _routes_public__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes-public */ "./src/routes-public.js");
+/* harmony import */ var koa_bodyparser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! koa-bodyparser */ "koa-bodyparser");
+/* harmony import */ var koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(koa_bodyparser__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _routes_public__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes-public */ "./src/routes-public.js");
+/* harmony import */ var _routes_private__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes-private */ "./src/routes-private.js");
 /* harmony import */ var _middlewares_errorHandler__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./middlewares/errorHandler */ "./src/middlewares/errorHandler.js");
 /* harmony import */ var _middlewares_notFound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./middlewares/notFound */ "./src/middlewares/notFound.js");
 /* harmony import */ var _middlewares_okOutput__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./middlewares/okOutput */ "./src/middlewares/okOutput.js");
 
 
+ // import favicon from 'koa-favicon'
 
 
 
- // import routesPrivate from './routes-private'
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = (app => {
-  app.use(koa_static__WEBPACK_IMPORTED_MODULE_0___default()('assets'));
-  app.use(koa_favicon__WEBPACK_IMPORTED_MODULE_1___default()('static/favicon.ico'));
-  app.use(koa_bodyparser__WEBPACK_IMPORTED_MODULE_2___default()());
+  app.use(koa_static__WEBPACK_IMPORTED_MODULE_0___default()('assets')); // app.use(favicon('static/favicon.ico'))
+
+  app.use(koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()());
   app.use(_middlewares_errorHandler__WEBPACK_IMPORTED_MODULE_4__["default"]);
   app.use(_middlewares_notFound__WEBPACK_IMPORTED_MODULE_5__["default"]);
   app.use(_middlewares_okOutput__WEBPACK_IMPORTED_MODULE_6__["default"]);
-  app.use(_routes_public__WEBPACK_IMPORTED_MODULE_3__["default"].routes(), _routes_public__WEBPACK_IMPORTED_MODULE_3__["default"].allowedMethods()); // app.use(routesPrivate.routes(), routesPrivate.allowedMethods())
+  app.use(_routes_public__WEBPACK_IMPORTED_MODULE_2__["default"].routes(), _routes_public__WEBPACK_IMPORTED_MODULE_2__["default"].allowedMethods());
+  app.use(_routes_private__WEBPACK_IMPORTED_MODULE_3__["default"].routes(), _routes_private__WEBPACK_IMPORTED_MODULE_3__["default"].allowedMethods());
+});
+
+/***/ }),
+
+/***/ "./src/middlewares/authenticate.js":
+/*!*****************************************!*\
+  !*** ./src/middlewares/authenticate.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jsonwebtoken */ "jsonwebtoken");
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! config */ "./src/config/index.js");
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (async (ctx, next) => {
+  if (!ctx.header.authorization) {
+    ctx.throw(401, 'should sign-in or sign-up to access this content');
+  } // get the token
+
+
+  const token = ctx.header.authorization.split(' ')[1];
+
+  try {
+    ctx.state.jwtPayload = jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default.a.verify(token, config__WEBPACK_IMPORTED_MODULE_1__["default"].JWT_SECRET);
+  } catch (err) {
+    if (err.name === 'TokenExpiredError') {
+      ctx.throw(401, err.message);
+    }
+
+    ctx.throw(403, err.message);
+  }
+
+  await next();
 });
 
 /***/ }),
@@ -300,6 +339,66 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/modules/private/animes/_router/index.js":
+/*!*****************************************************!*\
+  !*** ./src/modules/private/animes/_router/index.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_database_mysql__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core/database/mysql */ "./src/core/database/mysql.js");
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a();
+router.get('/', (ctx, next) => {
+  try {
+    var animes = core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT a.* FROM `episode` as e inner join `anime` as a on e.anime_id = a.id');
+  } catch (err) {
+    ctx.throw(500, err.sqlMessage);
+  }
+
+  ctx.type = 'json';
+  ctx.body = animes;
+});
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/modules/private/animes/index.js":
+/*!*********************************************!*\
+  !*** ./src/modules/private/animes/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_router */ "./src/modules/private/animes/_router/index.js");
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a({
+  prefix: '/anime'
+});
+const routes = [_router__WEBPACK_IMPORTED_MODULE_1__["default"]];
+
+for (let route of routes) {
+  router.use(route.routes(), route.allowedMethods());
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
 /***/ "./src/modules/public/animes/_routes/index.js":
 /*!****************************************************!*\
   !*** ./src/modules/public/animes/_routes/index.js ***!
@@ -319,7 +418,7 @@ __webpack_require__.r(__webpack_exports__);
 const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a();
 router.get('/', async (ctx, next) => {
   try {
-    var animes = await core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT * FROM `episode` inner join `anime` on episode.anime_id = anime.id ');
+    var animes = await core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT a.*, e.* FROM episode e INNER JOIN anime a ON e.anime_id = a.id ');
   } catch (err) {
     ctx.throw(500, err.sqlMessage);
   }
@@ -350,7 +449,7 @@ __webpack_require__.r(__webpack_exports__);
 const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a();
 router.get('/:id', async (ctx, next) => {
   try {
-    var anime = await core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT * FROM `anime` WHERE id = ?', [ctx.params.id]);
+    var anime = await core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT * FROM anime WHERE id = ?', [ctx.params.id]);
   } catch (err) {
     ctx.throw(500, err.sqlMessage);
   }
@@ -394,6 +493,253 @@ for (let route of routes) {
 
 /***/ }),
 
+/***/ "./src/modules/public/login/_routes/local.js":
+/*!***************************************************!*\
+  !*** ./src/modules/public/login/_routes/local.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jsonwebtoken */ "jsonwebtoken");
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bcryptjs */ "bcryptjs");
+/* harmony import */ var bcryptjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bcryptjs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_database_mysql__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core/database/mysql */ "./src/core/database/mysql.js");
+/* harmony import */ var config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! config */ "./src/config/index.js");
+
+
+
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a();
+router.post('/local', async (ctx, next) => {
+  let request = ctx.request.body || {};
+
+  if (request.username === undefined) {
+    ctx.throw(400, 'username param is required');
+  }
+
+  if (request.username === '') {
+    ctx.throw(400, 'username is required');
+  }
+
+  if (request.password === undefined) {
+    ctx.throw(400, 'password param is required');
+  }
+
+  if (request.password === '') {
+    ctx.throw(400, 'password is required');
+  }
+
+  let username = request.username;
+  let password = request.password;
+  let users = [];
+
+  try {
+    users = await core_database_mysql__WEBPACK_IMPORTED_MODULE_3__["default"].query('SELECT * FROM `users` WHERE username = ?', [username]);
+  } catch (err) {
+    ctx.throw(400, err.sqlMessage);
+  }
+
+  if (users.length === 0) {
+    ctx.throw(404, 'user not found');
+  }
+
+  let user = users[0];
+  let match = false;
+
+  try {
+    match = await bcryptjs__WEBPACK_IMPORTED_MODULE_2___default.a.compareSync(password, user.password);
+  } catch (err) {
+    ctx.throw(401, err);
+  }
+
+  if (match === false) {
+    ctx.throw(401, 'invalid password');
+  }
+
+  let payload = {
+    name: user.name,
+    email: user.email
+  };
+  let token = jsonwebtoken__WEBPACK_IMPORTED_MODULE_1___default.a.sign(payload, config__WEBPACK_IMPORTED_MODULE_4__["default"].JWT_SECRET, {
+    expiresIn: 1 * 60
+  });
+  ctx.body = {
+    user: payload,
+    message: 'logged in ok',
+    token: token
+  };
+});
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/modules/public/login/index.js":
+/*!*******************************************!*\
+  !*** ./src/modules/public/login/index.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _routes_local__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_routes/local */ "./src/modules/public/login/_routes/local.js");
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a({
+  prefix: '/login'
+});
+const routes = [_routes_local__WEBPACK_IMPORTED_MODULE_1__["default"]];
+
+for (let route of routes) {
+  router.use(route.routes(), route.allowedMethods());
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/modules/public/user/_routes/fetch-user.js":
+/*!*******************************************************!*\
+  !*** ./src/modules/public/user/_routes/fetch-user.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_database_mysql__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core/database/mysql */ "./src/core/database/mysql.js");
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a();
+router.get('/:id', async (ctx, next) => {
+  const id = parseInt(ctx.params.id);
+
+  try {
+    var user = core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT `id`, `name`, `created_on` FROM `users` WHERE id = ?', [ctx.params.id]);
+  } catch (err) {
+    ctx.throw(500, err.sqlMessage);
+  }
+
+  if (!user) {
+    ctx.status = 404;
+  } else {
+    ctx.type = 'json';
+    ctx.body = user;
+  }
+});
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/modules/public/user/_routes/index.js":
+/*!**************************************************!*\
+  !*** ./src/modules/public/user/_routes/index.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_database_mysql__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core/database/mysql */ "./src/core/database/mysql.js");
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a();
+router.get('/', async (ctx, next) => {
+  try {
+    var users = await core_database_mysql__WEBPACK_IMPORTED_MODULE_1__["default"].query('SELECT `id`, `name`, `created_on` FROM `users`');
+  } catch (err) {
+    ctx.throw(500, err.sqlMessage);
+  }
+
+  ctx.type = 'json';
+  ctx.body = users;
+});
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/modules/public/user/index.js":
+/*!******************************************!*\
+  !*** ./src/modules/public/user/index.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_routes */ "./src/modules/public/user/_routes/index.js");
+/* harmony import */ var _routes_fetch_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_routes/fetch-user */ "./src/modules/public/user/_routes/fetch-user.js");
+
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a({
+  prefix: '/users'
+});
+const routes = [_routes__WEBPACK_IMPORTED_MODULE_1__["default"], _routes_fetch_user__WEBPACK_IMPORTED_MODULE_2__["default"]];
+
+for (let route of routes) {
+  router.use(route.routes(), route.allowedMethods());
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./src/routes-private.js":
+/*!*******************************!*\
+  !*** ./src/routes-private.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
+/* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var private_animes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! private/animes */ "./src/modules/private/animes/index.js");
+/* harmony import */ var _middlewares_authenticate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares/authenticate */ "./src/middlewares/authenticate.js");
+
+
+
+
+
+const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a({
+  prefix: '/private'
+});
+const modules = [private_animes__WEBPACK_IMPORTED_MODULE_1__["default"]];
+
+for (let module of modules) {
+  router.use(_middlewares_authenticate__WEBPACK_IMPORTED_MODULE_2__["default"], module.routes(), module.allowedMethods());
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
 /***/ "./src/routes-public.js":
 /*!******************************!*\
   !*** ./src/routes-public.js ***!
@@ -406,6 +752,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa-router */ "koa-router");
 /* harmony import */ var koa_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa_router__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var modules_public_animes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! modules/public/animes */ "./src/modules/public/animes/index.js");
+/* harmony import */ var modules_public_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! modules/public/login */ "./src/modules/public/login/index.js");
+/* harmony import */ var modules_public_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! modules/public/user */ "./src/modules/public/user/index.js");
+
+
 
 
 
@@ -413,7 +763,7 @@ __webpack_require__.r(__webpack_exports__);
 const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a({
   prefix: '/public'
 });
-const modules = [modules_public_animes__WEBPACK_IMPORTED_MODULE_1__["default"]];
+const modules = [modules_public_animes__WEBPACK_IMPORTED_MODULE_1__["default"], modules_public_login__WEBPACK_IMPORTED_MODULE_2__["default"], modules_public_user__WEBPACK_IMPORTED_MODULE_3__["default"]];
 
 for (let module of modules) {
   router.use(module.routes(), module.allowedMethods());
@@ -432,6 +782,28 @@ for (let module of modules) {
 
 module.exports = __webpack_require__(/*! /home/omar/tailwind-practice/nuxt-with-tail/backend/src/index.js */"./src/index.js");
 
+
+/***/ }),
+
+/***/ "bcryptjs":
+/*!***************************!*\
+  !*** external "bcryptjs" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("bcryptjs");
+
+/***/ }),
+
+/***/ "jsonwebtoken":
+/*!*******************************!*\
+  !*** external "jsonwebtoken" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("jsonwebtoken");
 
 /***/ }),
 
@@ -454,17 +826,6 @@ module.exports = require("koa");
 /***/ (function(module, exports) {
 
 module.exports = require("koa-bodyparser");
-
-/***/ }),
-
-/***/ "koa-favicon":
-/*!******************************!*\
-  !*** external "koa-favicon" ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("koa-favicon");
 
 /***/ }),
 

@@ -1,13 +1,13 @@
 'use strict'
 
 import Router from 'koa-router'
-import local from './_routes/local'
+import fetchAnimes from './_router'
 
 const router = new Router({
-  prefix: '/login'
+  prefix: '/anime'
 })
 
-const routes = [local]
+const routes = [fetchAnimes]
 
 for (let route of routes) {
   router.use(route.routes(), route.allowedMethods())

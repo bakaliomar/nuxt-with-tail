@@ -7,7 +7,7 @@ const router = new Router()
 
 router.get('/', async (ctx, next) => {
   try {
-    var animes = await pool.query('SELECT * FROM `episode` inner join `anime` on episode.anime_id = anime.id ')
+    var animes = await pool.query('SELECT a.*, e.* FROM episode e INNER JOIN anime a ON e.anime_id = a.id ')
   } catch (err) {
     ctx.throw(500,err.sqlMessage)
   }
